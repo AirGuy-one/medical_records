@@ -45,9 +45,26 @@ class VisitOut(BaseModel):
 
 
 class DiagnosisCreate(BaseModel):
-    visit_id: UUID
     code: str
     description: str | None = None
+
+
+class PrescriptionCreate(BaseModel):
+    text: str
+
+
+class AttachmentCreate(BaseModel):
+    visit_id: UUID
+    file_path: str
+
+
+class AttachmentOut(BaseModel):
+    id: UUID
+    visit_id: UUID
+    file_path: str
+    uploaded_at: datetime
+
+    model_config = {"from_attributes": True}
 
 
 class DiagnosisOut(BaseModel):
@@ -59,28 +76,9 @@ class DiagnosisOut(BaseModel):
     model_config = {"from_attributes": True}
 
 
-class PrescriptionCreate(BaseModel):
-    visit_id: UUID
-    text: str
-
-
 class PrescriptionOut(BaseModel):
     id: UUID
     text: str
-    visit_id: UUID
-
-    model_config = {"from_attributes": True}
-
-
-class AttachmentCreate(BaseModel):
-    visit_id: UUID
-    file_path: str
-
-
-class AttachmentOut(BaseModel):
-    id: UUID
-    file_path: str
-    uploaded_at: datetime
     visit_id: UUID
 
     model_config = {"from_attributes": True}

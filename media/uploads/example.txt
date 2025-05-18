@@ -1,0 +1,13 @@
+Blood Test Report
+
+Patient: Иван Иванов  
+Date: 2025-05-20
+
+---------------------------------------
+Hemoglobin:        135 g/L  
+White Cells:       6.2 x10^9/L  
+Platelets:         250 x10^9/L  
+Glucose:           5.1 mmol/L  
+---------------------------------------
+
+Notes: Normal range values. No action required.
